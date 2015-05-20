@@ -7,7 +7,12 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
-		redirect_to profile_path
+
+		if @user.save
+			redirect_to homepage_path
+		else 
+			render 'form'
+		end
 	end
 
 	private
