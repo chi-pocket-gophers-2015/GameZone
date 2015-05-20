@@ -1,4 +1,4 @@
-title, players_min, player_max, age_min, age_max, duration, complexity
+title,players_min,players_max,age_min,age_max,duration,complexity
 "Chess",2,3,4,5,3,low
 "Monopoly",2,3,4,5,3,low
 "Scrabble",2,3,4,5,3,low
