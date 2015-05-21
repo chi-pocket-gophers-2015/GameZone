@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # post '/users' => 'users#create'
 
   resources :users
+  post '/users/:user_id/games/:game_id/ownerships' => 'ownerships#create', as: :ownerships
 
   get '/home' => 'users#home', as: :home
 
