@@ -8,7 +8,7 @@
   <tr>
     <td>Type: </td>
     <td><% @game.types.each do | type | %>
-          <%= link_to "#{type.phrase}", type_games_path(type) %>,
+          <%= link_to "#{type.phrase}", type_path(type) %>,
         <% end %></td>
   </tr>
   <% if @game.players_min && @game.players_max %>

@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+	def home
+		@user_games = current_user.games
+		@user_friends = User.where.not(id: session[:user_id])
+	end
+
 
 	def new
 		@user = User.new
@@ -9,8 +14,8 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 
 		if @user.save
-			redirect_to homepage_path
-		else 
+			redirect_to home_path
+		else
 			render 'form'
 		end
 	end

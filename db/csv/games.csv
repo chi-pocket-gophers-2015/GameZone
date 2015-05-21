@@ -1,49 +1,45 @@
 title,players_min,players_max,duration,complexity
-"Chess",2,2,1,high
-"Monopoly",2,6,2,med
-"Scrabble",2,4,1,med
-"Risk",2,6,3,med
-"Settlers of Catan",2,4,3,med
-"CLUE",2,6,1,med
-"Ticket to Ride",2,5,1,med
-"UNO",min,max,dur,comp
-"Battleship",2,2,1,low
-"Apples to Apples",4,10,1,low
-"Dominion",2,4,.5,high
-"Puerto Rico",2,5,2,med
-"Yahtzee",1,8,.5,med
-"Trivial Pursuit",2,6,2,med
-"Stratego",2,2,.5,med
-"Checkers",2,2,.5,low
-"Sorry!",2,4,1,low
-"Agricola",1,5,2,high
-"Carcassone",2,5,1,med
-"Pictionary",4,10,1,low
-"Pandemic",2,4,1,med
-"Connect Four",2,2,.25,low
-"Go",2,2,1,high
-"Backgammon",2,2,.5,med
-"Arkham Horror",1,8,3,high
-"Axis and Allies",2,5,.5,med
-"The Game of Life",2,6,.75,med
-"Candyland",2,4,.5,low
-"Trouble",2,4,.5,low
-"Chinese Checkers",2,6,.5,med
-"Mastermind",1,2,.25,med
-"Cranium",4,10,.5,med
-"Don't Break the Ice",2,4,.25,low
-"Scattergories",2,6,.5,med
-"Dominoes",2,4,.5,low
-"Cards Against Humanity",3,10,1,low
-"Guess Who?",2,2,.5,low
-"Othello",2,2,.5,med
-"Mancala",2,2,.5,med
-"Taboo",4,10,.5,low
-"Diplomacy",2,7,8,high
-"Wits & Wagers",3,7,.5,med
-"Chutes-and-Ladders",2,4,.5,low
-"Operation",1,4,.25,low
-
-
-
-
+"Chess",2,2,60,high
+"Monopoly",2,6,120,med
+"Scrabble",2,4,60,med
+"Risk",2,6,180,med
+"Settlers of Catan",2,4,180,med
+"CLUE",2,6,60,med
+"Ticket to Ride",2,5,60,med
+"UNO",2,10,30,low
+"Battleship",2,2,60,low
+"Apples to Apples",4,10,60,low
+"Dominion",2,4,30,high
+"Puerto Rico",2,5,120,med
+"Yahtzee",1,8,30,med
+"Trivial Pursuit",2,6,120,med
+"Stratego",2,2,30,med
+"Checkers",2,2,30,low
+"Sorry!",2,4,60,low
+"Agricola",1,5,120,high
+"Carcassone",2,5,60,med
+"Pictionary",4,10,60,low
+"Pandemic",2,4,60,med
+"Connect Four",2,2,15,low
+"Go",2,2,60,high
+"Backgammon",2,2,30,med
+"Arkham Horror",1,8,180,high
+"Axis and Allies",2,5,30,med
+"The Game of Life",2,6,45,med
+"Candyland",2,4,30,low
+"Trouble",2,4,30,low
+"Chinese Checkers",2,6,30,med
+"Mastermind",1,2,15,med
+"Cranium",4,10,30,med
+"Don't Break the Ice",2,4,15,low
+"Scattergories",2,6,30,med
+"Dominoes",2,4,30,low
+"Cards Against Humanity",3,10,60,low
+"Guess Who?",2,2,30,low
+"Othello",2,2,30,med
+"Mancala",2,2,30,med
+"Taboo",4,10,30,low
+"Diplomacy",2,7,480,high
+"Wits & Wagers",3,7,30,med
+"Chutes-and-Ladders",2,4,30,low
+"Operation",1,4,15,low

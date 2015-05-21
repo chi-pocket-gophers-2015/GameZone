@@ -1,9 +1,12 @@
-<!-- @user_games = current_user.game.all
-     @user_friends = User.all - current_user -->
-
 <tr>
   <td><%# vote total %></td>
-  <td><%= link_to "#{game.title}", type_game_path(@type, game) %></td>
-  <td><%= game.players_min %> to <%= game.players_max %></td>
-  <td><%= game.duration %></td>
+  <td><%= (link_to "#{game.title}", game_path(game)) %></td>
+
+  <% if game.players_min == game.players_max %>
+    <td><%= game.players_min %></td>
+  <% else %>
+    <td><%= "#{game.players_min}-#{game.players_max}" %></td>
+  <% end %>
+
+  <td><%= game.duration < 60 ? "#{game.duration} min." : pluralize(game.duration/60, "hour") %></td>
 </tr>
