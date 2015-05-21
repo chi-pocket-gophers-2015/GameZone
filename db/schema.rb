@@ -41,8 +41,6 @@ ActiveRecord::Schema.define(version: 20150520194120) do
     t.string   "title"
     t.integer  "players_min"
     t.integer  "players_max"
-    t.integer  "age_min"
-    t.integer  "age_max"
     t.integer  "duration"
     t.string   "complexity"
     t.datetime "created_at",  null: false

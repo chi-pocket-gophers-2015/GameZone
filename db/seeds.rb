@@ -8,19 +8,15 @@ CSV.table("db/csv/types.csv").each do |type|
   Type.create!(type.to_hash)
 end
 
-# CSV.table("db/csv/game_types.csv").each do |game_type|
-# 	game = Game.find_by_title(game_type[:game])
-# 	type = Type.find_by_phrase(game_type[:type])
-# 	GameType.create!(game: game, type: type)
-# end
-
-all_types = Type.all
-Game.all.each do |game|
-	types = rand(3)
-	GameType.create!(game: game, type: all_types.sample)
-	GameType.create!(game: game, type: all_types.sample) unless types < 1
-	GameType.create!(game: game, type: all_types.sample) unless types < 2
+CSV.table("db/csv/game_types.csv").each do |game_type|
+	game_object = Game.find_by_title(game_type[:game])
+  types = game_type[:type].split(",")
+  types.each do |type|
+    type_object = Type.find_by_phrase(type)
+    GameType.create!(game: game_object, type: type_object)
+  end
 end
+
 
 User.create!(username: "brang", password: "brang")
 User.create!(username: "nathan", password: "nathan")
