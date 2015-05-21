@@ -9,19 +9,26 @@
 	</p>
 	<p>
 		<%= f.label :complexity %>
-		<%= f.text_field :complexity %>
+		<%= f.select :complexity, [['Low','low'],['Medium','med'],['High','high']] %>
 	</p>
 	<p>
-		<%= f.label :players_min %>
-		<%= f.number_field :players_min %>
-		<%= f.label :players_max %>
-		<%= f.number_field :players_max %>
+		<%= f.label "Players from" %>
+		<%= f.number_field :players_min %> to <%= f.number_field :players_max %>
 	</p>
 	<p>
+
+		<% counter = 0 %>
 		<% @types.each do |type| %>
 			<%= f.label type.phrase %>
 			<%= f.check_box "type[]" "#{type.id}" %>
+			<% if counter == 5 %>
+				<br>
+				<% counter = 0 %>
+			<% else %>
+				<% counter += 1 %>
+			<% end %> 
 		<% end %>
+		
 	</p>
 	<p>
 		<%= f.submit value = "Create new game" %>
