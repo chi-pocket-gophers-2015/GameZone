@@ -10,14 +10,15 @@ module GamesHelper
 
   def i_own?(game)
     if current_user.games.include?(game)
-
+      "Already own!"
     else
-      <td></td>
+      "ADD BUTTON"# button_to()
     end
   end
 
-  def friends_own?
-    if :friends_own
+  def friends_own?(game)
+    owners = game.users
+    owners.map { |owner| owner.username }.join(", ")
   end
 
 end

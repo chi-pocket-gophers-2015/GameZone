@@ -4,4 +4,5 @@ class Game < ActiveRecord::Base
   has_many :comments
   has_many :game_types
   has_many :types, through: :game_types
+  has_many :users, through: :ownerships
 end
