@@ -1,0 +1,11 @@
+<h2><%= @type.phrase %></h2>
+
+<table>
+  <% @games.each do | game | %>
+<!-- render partial?? -->
+    <tr>
+      <td><%# vote total %></td>
+      <td><%= link_to "#{game.title}", type_game_path(@type, game) %></td>
+    </tr>
+  <% end %>
+</table>

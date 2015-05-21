@@ -1,0 +1,11 @@
+<h2>Types of Games</h3>
+
+<table>
+  <% @types.each do | type | %>
+<!--  render partial??   -->
+  <tr>
+    <td><%= link_to "#{type.phrase}", type_games_path(type) %></td>
+    <td><%= type.description %></td>
+  </tr>
+  <% end %>
+</table>
