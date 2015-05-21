@@ -1,0 +1,7 @@
+<h2><%= @type.phrase %></h2>
+
+<table>
+  <% @games.each do | game | %>
+    <%= render '_game' %>
+  <% end %>
+</table>
