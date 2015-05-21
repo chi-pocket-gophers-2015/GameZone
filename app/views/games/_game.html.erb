@@ -9,5 +9,10 @@
   <% end %>
 
   <td><%= duration(game) %></td>
+<% if @ownership %>
+  <td><%= i_own?(game) %></td>
+
+  <td><%= friend_own?(game) %></td>
+<% end %>
 
 </tr>
