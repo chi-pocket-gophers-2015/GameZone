@@ -5,7 +5,7 @@
   <td><%# vote total %></td>
   <td><%= (link_to "#{game.title}", game_path(game)) %></td>
   <td><%= game.players_min %> to <%= game.players_max %></td>
-  <td><%= game.duration %></td>
+  <td><%= game.duration.to_f %></td>
 </tr>
 
 
