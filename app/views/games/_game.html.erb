@@ -3,7 +3,17 @@
 
 <tr>
   <td><%# vote total %></td>
-  <td><%= link_to "#{game.title}", game_path(game) %></td>
+  <td><%= (link_to "#{game.title}", game_path(game)) %></td>
   <td><%= game.players_min %> to <%= game.players_max %></td>
   <td><%= game.duration %></td>
 </tr>
+
+
+<!-- @users = (current_user.blank? ? User.all : User.find(:all, :conditions => ["id != ?", current_user.id])) -->
+
+<!-- def self.all_except(user)
+  where.not(id: user)
+end
+@users = User.all_except(current_user) -->
+
+<!-- http://stackoverflow.com/questions/2672744/rails-activerecord-find-all-users-except-current-user -->
