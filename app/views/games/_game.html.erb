@@ -8,11 +8,5 @@
     <td><%= "#{game.players_min}-#{game.players_max}" %></td>
   <% end %>
 
-  <td><%= duration(game) %></td>
-<% if @ownership %>
-  <td><%= i_own?(game) %></td>
-
-  <td><%= friend_own?(game) %></td>
-<% end %>
-
+  <td><%= game.duration < 60 ? "#{game.duration} min." : pluralize(game.duration/60, "hour") %></td>
 </tr>
