@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	include BCrypt
   has_many :ownerships
   has_many :votes
   has_many :comments

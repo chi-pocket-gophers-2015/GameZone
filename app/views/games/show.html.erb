@@ -1,0 +1,65 @@
+<h2><%= @game.title %></h2>
+
+<table>
+  <tr>
+    <td>Complexity: </td>
+    <td><%= @game.complexity %></td>
+  </tr>
+  <tr>
+    <td>Type: </td>
+    <td><% @game.types.each do | type | %>
+          <%= link_to "#{type.phrase}", type_games_path(type) %>,
+        <% end %></td>
+  </tr>
+  <% if @game.players_min && @game.players_max %>
+    <tr>
+      <td>Number of Players: </td>
+      <td><%= @game.players_min %> - <%= @game.players_max %></td>
+    </tr>
+  <% elsif @game.players_min && @game.players_max == nil %>
+    <tr>
+      <td>Number of Players: </td>
+      <td><%= @game.players_min %> and up!</td>
+    </tr>
+  <% elsif @game.players_max && @game.players_min == nil %>
+    <tr>
+      <td>Number of Players: </td>
+      <td>Up to <%= @game.players_max %></td>
+    </tr>
+  <% else %>
+    <tr>
+      <td>Number of Players: </td>
+      <td>Any or unspecified</td>
+    </tr>
+  <% end %>
+  <% if @game.age_min && @game.age_max %>
+    <tr>
+      <td>Maturity: </td>
+      <td><%= @game.age_min %> - <%= @game.age_max %></td>
+    </tr>
+  <% elsif @game.age_min && @game.age_max == nil %>
+    <tr>
+      <td>Age: </td>
+      <td><%= pluralize(@game.age_min, 'year') %> old and up!</td>
+    </tr>
+  <% elsif @game.age_max && @game.age_min == nil %>
+    <tr>
+      <td>Maturity: </td>
+      <td>Up to <%= pluralize(@game.age_max, 'year') %> old</td>
+    </tr>
+  <% else %>
+    <tr>
+      <td>Maturity: </td>
+      <td>Any or unspecified</td>
+    </tr>
+  <% end %>
+  <tr>
+    <td>Estimated length in time to play: </td>
+    <td><%= @game.duration %></td>
+  </tr>
+</table>
+
+<hr>
+
+<h3>What people are saying about <%= @game.title %></h3>
+

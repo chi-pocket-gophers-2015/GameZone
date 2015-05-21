@@ -1,80 +1,48 @@
-title,players_min,players_max,age_min,age_max,duration,complexity
-"Chess",2,3,4,5,3,low
-"Monopoly",2,3,4,5,3,low
-"Scrabble",2,3,4,5,3,low
-"Risk",2,3,4,5,3,low
-"Settlers of Catan",2,3,4,5,3,low
-"CLUE",2,3,4,5,3,low
-"Ticket to Ride",2,3,4,5,3,low
-"UNO",2,3,4,5,3,low
-"Battleship",2,3,4,5,3,low
-"Apples to Apples",3,4,5,6,4,medium
-"Dominion",3,4,5,6,4,medium
-"Puerto Rico",3,4,5,6,4,medium
-"Yahtzee",3,4,5,6,4,medium
-"Trivial Pursuit",3,4,5,6,4,medium
-"Stratego",3,4,5,6,4,medium
-"Checkers",3,4,5,6,4,medium
-"Sorry!",3,4,5,6,4,medium
-"Agricola",3,4,5,6,4,medium
-"Carcassone",3,4,5,6,4,medium
-"Pictionary",3,4,5,6,4,medium
-"Pandemic",3,4,5,6,4,medium
-"Connect Four",3,4,5,6,4,medium
-"Go",3,4,5,6,4,medium
-"Backgammon",3,4,5,6,4,medium
-"Arkham Horror",3,4,5,6,4,medium
-"Axis and Allies",3,4,5,6,4,medium
-"Power Grid",3,4,5,6,4,medium
-"The Game of Life",3,4,5,6,4,medium
-"Candyland",3,4,5,6,4,medium
-"A Game of Thrones",3,4,5,6,4,medium
-"Battlestar Galactica",3,4,5,6,4,medium
-"Cosmic Encounter",3,4,5,6,4,medium
-"Small World",3,4,5,6,4,medium
-"Twilight Struggle",3,4,5,6,4,medium
-"Trouble",3,4,5,6,4,medium
-"Tigris & Euphrates",3,4,5,6,4,medium
-"7 Wonders",3,4,5,6,4,medium
-"Twilight Imperium",3,4,5,6,4,medium
-"Chinese Checkers",3,4,5,6,4,medium
-"Mastermind",3,4,5,6,4,medium
-"Cranium",4,5,6,7,5,high
-"El Grande",4,5,6,7,5,high
-"Don't Break the Ice",4,5,6,7,5,high
-"Scattergories",4,5,6,7,5,high
-"Dixit",4,5,6,7,5,high
-"Mahjong",4,5,6,7,5,high
-"Say Anything",4,5,6,7,5,high
-"Dominoes",4,5,6,7,5,high
-"Dominant Species",4,5,6,7,5,high
-"Cards Against Humanity",4,5,6,7,5,high
-"Guess Who?",4,5,6,7,5,high
-"Dungeon!",4,5,6,7,5,high
-"Othello",4,5,6,7,5,high
-"Mancala",4,5,6,7,5,high
-"The Invasion of Canada",4,5,6,7,5,high
-"Taboo",4,5,6,7,5,high
-"Diplomacy",4,5,6,7,5,high
-"Descent: Journeys in the Dark",4,5,6,7,5,high
-"Hi Ho! Cherry-O",4,5,6,7,5,high
-"Wits & Wagers",4,5,6,7,5,high
-"Caylus",4,5,6,7,5,high
-"Key to the Kingdom",4,5,6,7,5,high
-"Chutes-and-Ladders",4,5,6,7,5,high
-"Blood Bowl",4,5,6,7,5,high
-"Uno Attack",4,5,6,7,5,high
-"Shogun",4,5,6,7,5,high
-"Operation",4,5,6,7,5,high
-"Through the Ages: A Story of Civilization",4,5,6,7,5,high
-"Pay Day",4,5,6,7,5,high
-"Shadows Over Camelot",4,5,6,7,5,high
-"Alhambra",4,5,6,7,5,high
-"Balderdash",4,5,6,7,5,high
-"Le Havre",4,5,6,7,5,high
-"Acquire",4,5,6,7,5,high
-"Scotland Yard",4,5,6,7,5,high
-"Summoner Wars",4,5,6,7,5,high
+title,players_min,players_max,duration,complexity
+"Chess",2,2,1,high
+"Monopoly",2,6,2,med
+"Scrabble",2,4,1,med
+"Risk",2,6,3,med
+"Settlers of Catan",2,4,3,med
+"CLUE",2,6,1,med
+"Ticket to Ride",2,5,1,med
+"UNO",min,max,dur,comp
+"Battleship",2,2,1,low
+"Apples to Apples",4,10,1,low
+"Dominion",2,4,.5,high
+"Puerto Rico",2,5,2,med
+"Yahtzee",1,8,.5,med
+"Trivial Pursuit",2,6,2,med
+"Stratego",2,2,.5,med
+"Checkers",2,2,.5,low
+"Sorry!",2,4,1,low
+"Agricola",1,5,2,high
+"Carcassone",2,5,1,med
+"Pictionary",4,10,1,low
+"Pandemic",2,4,1,med
+"Connect Four",2,2,.25,low
+"Go",2,2,1,high
+"Backgammon",2,2,.5,med
+"Arkham Horror",1,8,3,high
+"Axis and Allies",2,5,.5,med
+"The Game of Life",2,6,.75,med
+"Candyland",2,4,.5,low
+"Trouble",2,4,.5,low
+"Chinese Checkers",2,6,.5,med
+"Mastermind",1,2,.25,med
+"Cranium",4,10,.5,med
+"Don't Break the Ice",2,4,.25,low
+"Scattergories",2,6,.5,med
+"Dominoes",2,4,.5,low
+"Cards Against Humanity",3,10,1,low
+"Guess Who?",2,2,.5,low
+"Othello",2,2,.5,med
+"Mancala",2,2,.5,med
+"Taboo",4,10,.5,low
+"Diplomacy",2,7,8,high
+"Wits & Wagers",3,7,.5,med
+"Chutes-and-Ladders",2,4,.5,low
+"Operation",1,4,.25,low
 
 
 
