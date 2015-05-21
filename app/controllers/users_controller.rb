@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+	def home
+		@user_games = current_user.games
+		@user_friends = User.where.not(id: session[:user_id])
+	end
+
 
 	def new
 		@user = User.new
