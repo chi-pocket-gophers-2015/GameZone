@@ -2,7 +2,7 @@
   <td><%# vote total %></td>
   <td><%= (link_to "#{game.title}", game_path(game)) %></td>
 
-  <% if game.players_min == game.players_max %>
+  <% if check_players(game) %>
     <td><%= game.players_min %></td>
   <% else %>
     <td><%= "#{game.players_min}-#{game.players_max}" %></td>
