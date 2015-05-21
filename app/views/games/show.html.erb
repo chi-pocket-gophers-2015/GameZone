@@ -40,12 +40,12 @@
   <% elsif @game.age_min && @game.age_max == nil %>
     <tr>
       <td>Age: </td>
-      <td><%= @game.age_min %> and up!</td>
+      <td><%= pluralize(@game.age_min, 'year') %> old and up!</td>
     </tr>
   <% elsif @game.age_max && @game.age_min == nil %>
     <tr>
       <td>Maturity: </td>
-      <td>Up to <%= @game.age_max %></td>
+      <td>Up to <%= pluralize(@game.age_max, 'year') %> old</td>
     </tr>
   <% else %>
     <tr>

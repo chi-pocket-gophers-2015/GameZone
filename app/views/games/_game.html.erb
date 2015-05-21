@@ -3,7 +3,7 @@
 
 <tr>
   <td><%# vote total %></td>
-  <td><%= link_to "#{game.title}", game_path(game) %></td>
+  <td><%= link_to "#{game.title}", type_game_path(@type, game) %></td>
   <td><%= game.players_min %> to <%= game.players_max %></td>
   <td><%= game.duration %></td>
 </tr>

@@ -2,6 +2,10 @@
 
 <table>
   <% @games.each do | game | %>
-    <%= render '_game' %>
+<!-- render partial?? -->
+    <tr>
+      <td><%# vote total %></td>
+      <td><%= link_to "#{game.title}", type_game_path(@type, game) %></td>
+    </tr>
   <% end %>
 </table>

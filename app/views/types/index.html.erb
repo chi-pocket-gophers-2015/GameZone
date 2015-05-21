@@ -2,6 +2,10 @@
 
 <table>
   <% @types.each do | type | %>
-    <%= render '_type' %>
+<!--  render partial??   -->
+  <tr>
+    <td><%= link_to "#{type.phrase}", type_games_path(type) %></td>
+    <td><%= type.description %></td>
+  </tr>
   <% end %>
 </table>
