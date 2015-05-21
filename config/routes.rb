@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/users/new' => 'users#new'
   post '/users' => 'users#create'
 
+  get '/home' => 'users#home', as: :home
+
   get '/login' => 'sessions#new', as: :login
   post '/sessions/new' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', as: :logout
