@@ -1,0 +1,30 @@
+<%= form_for :game, url: '/games', method: 'post' do |f| %>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+		<p>
+		<%= f.label :duration %>
+		<%= f.number_field :duration %> minutes
+	</p>
+	<p>
+		<%= f.label :complexity %>
+		<%= f.text_field :complexity %>
+	</p>
+	<p>
+		<%= f.label :players_min %>
+		<%= f.number_field :players_min %>
+		<%= f.label :players_max %>
+		<%= f.number_field :players_max %>
+	</p>
+	<p>
+		<% @types.each do |type| %>
+			<%= f.label type.phrase %>
+			<%= f.check_box "type[]" "#{type.id}" %>
+		<% end %>
+	</p>
+	<p>
+		<%= f.submit value = "Create new game" %>
+	</p>
+
+<% end %>
