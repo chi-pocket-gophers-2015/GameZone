@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get '/users/new' => 'users#new'
-  post '/users' => 'users#create'
+  # get '/users/new' => 'users#new'
+  # post '/users' => 'users#create'
+
+  resources :users
+
+  get '/home' => 'users#home', as: :home
 
   get '/login' => 'sessions#new', as: :login
   post '/sessions/new' => 'sessions#create'
