@@ -1,6 +1,13 @@
 <tr>
   <td><%# vote total %></td>
   <td><%= (link_to "#{game.title}", game_path(game)) %></td>
-  <td><%= game.players_min %> to <%= game.players_max %></td>
-  <td><%= game.duration.to_f %></td>
+
+  <% if game.players_min == game.players_max %>
+    <td><%= game.players_min %></td>
+  <% else %>
+    <td><%= "#{game.players_min}-#{game.players_max}" %></td>
+  <% end %>
+
+  <td><%= game.duration < 60 ? "#{game.duration} min." : pluralize(game.duration/60, "hour") %></td>
+
 </tr>
