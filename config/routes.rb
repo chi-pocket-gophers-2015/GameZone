@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :users
   post '/users/:user_id/games/:game_id/ownerships' => 'ownerships#create', as: :ownerships
+  delete '/ownerships/:id' => "ownerships#destroy", as: :remove_ownership
 
   get '/home' => 'users#home', as: :home
 
