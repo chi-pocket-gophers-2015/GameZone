@@ -12,7 +12,7 @@ module GamesHelper
     if current_user.games.include?(game)
       "Already own!"
     else
-      "ADD BUTTON"# button_to()
+      button_to("I own this!", ownerships_path(current_user, game))
     end
   end
 
