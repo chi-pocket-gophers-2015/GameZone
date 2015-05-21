@@ -1,6 +1,6 @@
 <h1>Welcome to MyGameZone!</h1>
 
-<h2>My Games | <i><%= link_to("Add a game", games_path(locals: @ownership)) %></i></h2>
+<h2>My Games | <i><%= link_to("Add a game", games_path) %></i></h2>
 
 <table>
   <tr>
@@ -8,6 +8,8 @@
     <th>Game</th>
     <th>Players</th>
     <th>Time</th>
+    <th>I Own?</th>
+    <th>Who Owns?</th>
   </tr>
   <%= render @user_games %>
 </table>

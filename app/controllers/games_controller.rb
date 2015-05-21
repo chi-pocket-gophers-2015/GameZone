@@ -1,8 +1,7 @@
 class GamesController < ApplicationController
 
   def index
-    @type = Type.find_by(id: params[:type_id])
-    @games = @type.games
+    @games = Game.all
   end
 
   def show
