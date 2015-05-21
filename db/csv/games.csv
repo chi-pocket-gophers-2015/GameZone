@@ -6,7 +6,7 @@ title,players_min,players_max,duration,complexity
 "Settlers of Catan",2,4,3,med
 "CLUE",2,6,1,med
 "Ticket to Ride",2,5,1,med
-"UNO",min,max,dur,comp
+"UNO",2,10,.5,low
 "Battleship",2,2,1,low
 "Apples to Apples",4,10,1,low
 "Dominion",2,4,.5,high
