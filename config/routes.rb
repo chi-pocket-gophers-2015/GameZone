@@ -20,17 +20,10 @@ Rails.application.routes.draw do
   post '/sessions/new' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', as: :logout
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  resources :games
   resources :types
+  resources :games do 
+    resources :comments, only: [:create, :destroy]
+  end
 
   # Example resource route with options:
   #   resources :products do
