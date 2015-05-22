@@ -11,9 +11,9 @@ module GamesHelper
   def i_own?(game)
     if current_user.games.include?(game)
       old_game = Ownership.where(user: current_user, game: game)[0]
-      button_to("Fuck this game", remove_ownership_path(old_game), method: :delete)
+      button_to("Remove", remove_ownership_path(old_game), method: :delete, :style => "background-color:#FF8484; width: 80px;")
     else
-      button_to("I own this!", ownerships_path(current_user, game))
+      button_to("Add", ownerships_path(current_user, game), :style => "background-color:#7DDE7D; width: 80px;")
     end
   end
 
