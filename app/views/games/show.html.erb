@@ -2,14 +2,26 @@
 
 <table>
   <tr>
+    <td>GameZone© score:</td>
+    <td><%= @game.score %></td>
+  </tr>
+  <tr>
     <td>Complexity: </td>
     <td><%= @game.complexity %></td>
   </tr>
   <tr>
     <td>Type: </td>
-    <td><% @game.types.each do | type | %>
-          <%= link_to "#{type.phrase}", type_path(type) %>,
-        <% end %></td>
+    <td>
+      <% type_list = @game.types.each_with_index do |type,index| %>
+        <%= link_to "#{type.phrase}", type_path(type) %>
+        <% if index == @game.types.length - 2 %>
+          , and
+        <% elsif index == @game.types.length - 1 %>
+        <% else %>
+          ,
+        <% end %>
+      <% end %>
+    </td>
   </tr>
   <% if @game.players_min && @game.players_max %>
     <tr>
@@ -32,34 +44,17 @@
       <td>Any or unspecified</td>
     </tr>
   <% end %>
-  <% if @game.age_min && @game.age_max %>
-    <tr>
-      <td>Maturity: </td>
-      <td><%= @game.age_min %> - <%= @game.age_max %></td>
-    </tr>
-  <% elsif @game.age_min && @game.age_max == nil %>
-    <tr>
-      <td>Age: </td>
-      <td><%= pluralize(@game.age_min, 'year') %> old and up!</td>
-    </tr>
-  <% elsif @game.age_max && @game.age_min == nil %>
-    <tr>
-      <td>Maturity: </td>
-      <td>Up to <%= pluralize(@game.age_max, 'year') %> old</td>
-    </tr>
-  <% else %>
-    <tr>
-      <td>Maturity: </td>
-      <td>Any or unspecified</td>
-    </tr>
-  <% end %>
   <tr>
     <td>Estimated length in time to play: </td>
-    <td><%= @game.duration %></td>
+    <td><%= duration(@game) %></td>
   </tr>
 </table>
 
 <hr>
 
-<h3>What people are saying about <%= @game.title %></h3>
+<div id="comments">
+  <h3>What people are saying about <%= @game.title %></h3>
+  <%= render @comments %>
+  <%= render 'comments/form' %>
+</div>
 

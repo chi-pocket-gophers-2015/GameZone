@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # post '/users' => 'users#create'
 
   resources :users
+  post '/users/:user_id/games/:game_id/ownerships' => 'ownerships#create', as: :ownerships
+  delete '/ownerships/:id' => "ownerships#destroy", as: :remove_ownership
 
   get '/home' => 'users#home', as: :home
 
@@ -18,17 +20,10 @@ Rails.application.routes.draw do
   post '/sessions/new' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', as: :logout
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  resources :games
-  resources :types
+  resources :types, only: [:index, :show]
+  resources :games, except: [:edit, :update] do
+    resources :comments, only: [:create, :destroy]
+  end
 
   # Example resource route with options:
   #   resources :products do

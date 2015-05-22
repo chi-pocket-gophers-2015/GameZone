@@ -1,0 +1,7 @@
+<div class="comment">
+	<%= comment.body %>
+	<div class="comment_author">
+		<%= "~ #{comment.user.username}" %><br>
+		<%= time_ago_in_words(comment.created_at, include_seconds: true) %>
+	</div>
+</div>

@@ -1,11 +1,12 @@
 class GamesController < ApplicationController
 
   def index
-    @games = Game.all
+    @games = Game.all.order(:title)
   end
 
   def show
     @game = Game.find_by(id: params[:id])
+    @comments = @game.comments
   end
 
   def new
