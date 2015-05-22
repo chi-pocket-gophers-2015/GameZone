@@ -2,6 +2,10 @@
 
 <table>
   <tr>
+    <td>GameZone© score:</td>
+    <td><%= @game.score %></td>
+  </tr>
+  <tr>
     <td>Complexity: </td>
     <td><%= @game.complexity %></td>
   </tr>
@@ -48,4 +52,8 @@
 
 <hr>
 
-<h3>What people are saying about <%= @game.title %></h3>
+<div id="comments">
+  <h3>What people are saying about <%= @game.title %></h3>
+  <%= render @comments %>
+  <%= render 'comments/form' %>
+</div>
