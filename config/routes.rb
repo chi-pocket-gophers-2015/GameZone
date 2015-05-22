@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   post '/sessions/new' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', as: :logout
 
-  resources :types
-  resources :games do 
+  resources :types, only: [:index, :show]
+  resources :games, except: [:edit, :update] do
     resources :comments, only: [:create, :destroy]
   end
 
