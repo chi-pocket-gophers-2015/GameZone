@@ -11,11 +11,12 @@ RSpec.describe GamesController, type: :controller do
   let(:g_t3) { Game_type.create(game: game2, type: type1) }
   let(:g_t4) { Game_type.create(game: game2, type: type3) }
 
-  # describe "index" do
-  #   it "should contain a list all of existing Games" do
-  #     expect(assigns(:games)).to include?(Game.all)
-  #   end
-  # end
+  describe "index" do
+    it "should contain a list all of existing Games" do
+      get :index
+      expect(assigns(:games)).to include(game1, game2)
+    end
+  end
 
   describe "show" do
     it "should find the game specified in params" do
@@ -31,12 +32,13 @@ RSpec.describe GamesController, type: :controller do
     end
   end
 
-  # decribe "create" do
-  #   it "creates a game if given good params" do
-  #     post :create
-  #     expect(assigns(:game)).to be_a(Game)
-  #     expect(assigns(:game).id).not_to be_nil
-  #   end
-  # end
+  describe "create" do
+    it "creates a game if given good params" do
+      post :create, game: { title: "A new game", type: [{"1"=>"1"}] }
+
+      expect(assigns(:game)).to be_a(Game)
+      expect(assigns(:game).id).not_to be_nil
+    end
+  end
 
 end
