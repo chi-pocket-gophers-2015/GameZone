@@ -27,6 +27,10 @@ Rails.application.routes.draw do
   resources :types, only: [:index, :show]
   resources :games, except: [:edit, :update] do
     resources :comments, only: [:create, :destroy]
+    member do
+      post 'upvote'
+      post 'downvote'
+    end
   end
 
   # Example resource route with options:
