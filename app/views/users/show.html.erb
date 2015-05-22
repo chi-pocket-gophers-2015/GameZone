@@ -1,0 +1,15 @@
+<h1>Welcome to MyGameZone!</h1>
+
+<h2>My Friend <i><%= @friend.username%>'s</i> Games</h2>
+
+<table>
+  <tr>
+    <th>Votes</th>
+    <th>Game</th>
+    <th>Players</th>
+    <th>Time</th>
+    <th>I Own?</th>
+    <th>Who Owns?</th>
+  </tr>
+  <%= render @friend_games %>
+</table>
