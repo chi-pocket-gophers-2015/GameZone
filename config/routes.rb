@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   # get '/users/new' => 'users#new'
   # post '/users' => 'users#create'
 
-  resources :users do
-    resources :games, only: [] do
-      resources :ownerships, only: [:create]
-    end
-  end
-  # post '/users/:user_id/games/:game_id/ownerships' => 'ownerships#create', as: :ownerships
+  resources :users #do
+  #   resources :games, only: [] do
+  #     resources :ownerships, only: [:create]
+  #   end
+  # end
+  post '/users/:user_id/games/:game_id/ownerships' => 'ownerships#create', as: :ownerships
   delete '/ownerships/:id' => "ownerships#destroy", as: :remove_ownership
 
   get '/home' => 'users#home', as: :home
