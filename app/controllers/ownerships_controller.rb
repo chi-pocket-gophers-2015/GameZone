@@ -5,7 +5,8 @@ class OwnershipsController < ApplicationController
     # user = User.find_by_id(params[:user_id])
     # @ownership = Ownership.create(game: game, user: user)
     @ownership = Ownership.create(game_id: params[:game_id], user_id: params[:user_id])
-    redirect_to games_path
+    redirect_to(:back)
+    # games_path
   end
 
   def destroy
