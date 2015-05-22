@@ -21,11 +21,11 @@ describe GamesHelper do
   describe "#check_players" do
 
     it "return true when players_min equals players_max" do
-      expect(game1.players_min == game1.players_max).to be_truthy
+      expect(check_players(game1)).to be_truthy
     end
 
     it "return false when players_min doesn't equal players_max" do
-      expect(game2.players_min == game2.players_max).to be_falsey
+      expect(check_players(game2)).to be_falsey
     end
   end
 
