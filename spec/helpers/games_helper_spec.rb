@@ -40,7 +40,7 @@ describe GamesHelper do
   end
 
   describe "#i_own?" do
-    it "presents `delete` button for games I own" do
+    xit "presents `delete` button for games I own" do
       # helper.stub(:current_user) { natty }
       allow(helper).to receive(:current_user) { natty }
       expect(i_own?(game1)).to be_truthy
