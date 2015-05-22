@@ -25,6 +25,17 @@ class GamesController < ApplicationController
   	end
   end
 
+  def upvote
+    register_vote(1)
+    redirect_to game_path(@game)
+  end
+
+  def downvote
+    register_vote(-1)
+    redirect_to game_path(@game)
+  end
+
+
   private
   	def game_params
   		params.require(:game).permit(:title, :duration, :complexity, :players_min, :players_max)
@@ -39,4 +50,15 @@ class GamesController < ApplicationController
   		end
   		return types
   	end
+
+    def register_vote(new_value)
+      @game = Game.find_by_id(params[:id])
+      @vote = Vote.find_by(user: current_user, game: @game)
+      
+      if @vote
+        @vote.update_attributes(value: new_value)
+      else
+        @game.votes.create(user: current_user, value: new_value)
+      end
+    end
 end
