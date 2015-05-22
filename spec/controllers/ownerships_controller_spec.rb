@@ -29,12 +29,12 @@ describe OwnershipsController do
   #   end
   # end
 
-  # describe "GET #new" do
-  #   it "creates empty Game object" do
-  #     get :new
-  #     expect(assigns(:game)).to be_a_new(Game)
-  #   end
-  # end
+  describe "GET #new" do
+    it "creates empty Game object" do
+      get :new
+      expect(assigns(:game)).to be_a_new(Game)
+    end
+  end
 
   # describe "POST create" do
   #   context "when valid params are passed" do
@@ -55,17 +55,17 @@ describe OwnershipsController do
   #     end
   #   end
 
-  #   context "when invalid params are passed" do
-  #     it "assigns a newly created but unsaved game as @game" do
-  #       post :create, :game => {user_throw: "butts"}
-  #       expect(assigns(:game)).to_not be_valid
-  #     end
+    context "when invalid params are passed" do
+      it "assigns a newly created but unsaved game as @game" do
+        post :create, :game => {user_throw: "butts"}
+        expect(assigns(:game)).to_not be_valid
+      end
 
-  #     it "re-renders the 'new' template" do
-  #       post :create, :game => {user_throw: "butts"}
-  #       expect(response).to render_template(:new)
-  #     end
-  #   end
+      it "re-renders the 'new' template" do
+        post :create, :game => {user_throw: "butts"}
+        expect(response).to render_template(:new)
+      end
+    end
   # end
 
   describe "DELETE #destroy" do
