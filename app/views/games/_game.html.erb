@@ -1,5 +1,5 @@
 <tr>
-  <td>vote<%# vote total %></td>
+  <td><%= game.score %></td>
   <td><%= (link_to "#{game.title}", game_path(game)) %></td>
 
   <% if check_players(game) %>
