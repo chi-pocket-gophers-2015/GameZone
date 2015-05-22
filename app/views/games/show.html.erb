@@ -3,6 +3,7 @@
 <table>
   <tr>
     <td>GameZone© score:</td>
+    <td><%= render partial: 'votes/buttons', locals: { game: @game } %></td>
     <td><%= @game.score %></td>
   </tr>
   <tr>
@@ -45,8 +46,8 @@
     </tr>
   <% end %>
   <tr>
-    <td>Estimated length in time to play: </td>
-    <td><%= duration(@game) %></td>
+    <td>Playing time: </td>
+    <td><%= duration(@game) %> min</td>
   </tr>
 </table>
 
