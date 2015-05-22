@@ -55,5 +55,9 @@ describe GamesHelper do
     it "returns owners of a game" do
       expect(friends_own?(game1)).to eq("brang, natty")
     end
+
+    it "returns zero owners for an unowned game" do
+      expect(friends_own?(game2)).to eq("")
+    end
   end
 end
