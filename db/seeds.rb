@@ -1,4 +1,4 @@
-require 'CSV'
+require 'csv'
 
 CSV.table("db/csv/games.csv").each do |game|
   Game.create!(game.to_hash)
