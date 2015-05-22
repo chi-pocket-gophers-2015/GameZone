@@ -20,7 +20,7 @@
 		<% counter = 0 %>
 		<% @types.each do |type| %>
 			<%= f.label type.phrase %>
-			<%= f.check_box "type[]" "#{type.id}" %>
+			<%= f.check_box "type[]" "#{type.id}" %> |
 			<% if counter == 5 %>
 				<br>
 				<% counter = 0 %>
